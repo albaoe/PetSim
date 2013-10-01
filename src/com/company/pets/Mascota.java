@@ -10,7 +10,7 @@ package com.company.pets;
 public class Mascota {
     enum Alimentacion{ carnivoro, herbivoro, omnivoro }
     enum Clase{ pez, anfibio, reptil, ave, mamifero }
-    enum Comida{ hamburguesa(0.4f), ensalada(0.02f), pizza(0.3f), pescado(0.1f), carne(0.2f);
+    enum Comida{ hamburguesa(0.4f), ensalada(0.02f), pizza(0.3f);
         protected float peso;
         private Comida(float peso){ this.peso = peso; }
     }
@@ -31,17 +31,24 @@ public class Mascota {
         this.clase = clase;
     }
 
-    public boolean comer(Comida comida) {
+    public String comer(Comida comida) {
         this.peso += comida.peso;
-        return true;
+        String respuesta = "";
+        if (comida == Mascota.Comida.ensalada){
+            respuesta = "Puaj, menuda basura de " + comida + ", dame comida de verdad. \n";
+        } else {
+            respuesta = "Me he zampado una " + comida + ". Estaba muy rica, jeje \n";
+        }
+        return respuesta;
     }
 
-    public boolean pasear(float tiempo) {
+    public String pasear(float tiempo) {
         this.peso -= 0.02f * tiempo;
-        return true;
+        String respuesta = "Ohh! Que maravilla. He paseado durante " + tiempo + " horas.\n";
+        return respuesta;
     }
 
     public String saludo() {
-        return "Hola, mi nombre es " + this.nombre;
+        return "Hola, mi nombre es " + this.nombre + ", peso " + this.peso + "kg, tengo " + this.edad + " tacos";
     }
 }
