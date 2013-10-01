@@ -7,30 +7,50 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 	// write your code here
-        System.out.println("****************************");
-        System.out.println("*   Bienvenido a Pet Sim   *");
-        System.out.println("*     Escoja una opcion    *");
-        System.out.println("****************************");
-        System.out.println("\n");
-        System.out.println("1) Crear mascota");
-        System.out.println("2) Jugar con mascota ya creada");
-        System.out.println("0) Salir");
+        int read = -1;
+        int read2 = -1;
         Scanner teclado = new Scanner(System.in);
-        int read = teclado.nextInt();
-        switch(read){
-            case 1:
-                System.out.println("**************************************************");
-                System.out.println("*   Bienvenido al menu de creacion de mascotas   *");
-                System.out.println("*               Escoja una opcion                *");
-                System.out.println("**************************************************");
-                System.out.println("\n");
-                System.out.println("1) Crear topo");
-                System.out.println("0) Salir");
-                break;
-            case 2:
-                break;
-            case 0:
-                break;
+
+        while(read!=0){
+            System.out.println("****************************");
+            System.out.println("*   Bienvenido a Pet Sim   *");
+            System.out.println("*     Escoja una opcion    *");
+            System.out.println("****************************");
+            System.out.println("\n");
+            System.out.println("1) Crear mascota");
+            System.out.println("2) Jugar con mascota ya creada");
+            System.out.println("0) Salir\n");
+
+            read = teclado.nextInt();
+
+            switch(read){
+                case 1:
+                    while(read2!=0){
+                        System.out.println("**************************************************");
+                        System.out.println("*   Bienvenido al menu de creacion de mascotas   *");
+                        System.out.println("*               Escoja una opcion                *");
+                        System.out.println("**************************************************");
+                        System.out.println("\n");
+                        System.out.println("1) Crear topo");
+                        System.out.println("0) Salir\n");
+
+                        read2 = teclado.nextInt();
+
+                        switch (read2){
+                            case 1:
+                                System.out.println("Introduce el nombre de tu mascota:");
+                                String nombre = teclado.nextLine();
+                                System.out.println("Introduce el peso de tu mascota:");
+                                float peso = teclado.nextFloat();
+                                System.out.println("Introduce la edad de tu mascota:");
+                                int edad = teclado.nextInt();
+                                Topo topo1 = new Topo(nombre,edad,peso);
+                        }
+                    }
+                    break;
+                case 2:
+                    break;
+             }
         }
         Topo topo1 = new Topo("Freud", 2, 5.6f);
         System.out.println(topo1.saludo());
