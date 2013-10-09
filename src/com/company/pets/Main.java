@@ -18,12 +18,20 @@ public class Main {
             System.out.println("1) Crear mascota\n");
             System.out.println("0) Salir\n");
 
+            teclado = new Scanner(System.in);
+
             try{
-                read = teclado.nextInt();
+                if(teclado.hasNextInt()){
+                    read = teclado.nextInt();
+                }
+                else
+                    read = 2;
 
                 switch(read){
                     case 1:
                         MenuCreacion();
+                        break;
+                    default:
                         break;
                 }
             }catch(Exception e){
