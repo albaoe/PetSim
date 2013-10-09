@@ -18,6 +18,8 @@ public class Main {
             System.out.println("1) Crear mascota\n");
             System.out.println("0) Salir\n");
 
+            //////////////////////FALTA////////////////////////
+
             try{
                 read = teclado.nextInt();
 
@@ -71,9 +73,11 @@ public class Main {
         String nombre = teclado.next();
 
         System.out.println("Introduce el peso de tu mascota:");
+        //////////////////////FALTA////////////////////////
         float peso = teclado.nextFloat();
 
         System.out.println("Introduce la edad de tu mascota:");
+        //////////////////////FALTA////////////////////////
         int edad = teclado.nextInt();
 
         return new Topo(nombre,edad,peso);
