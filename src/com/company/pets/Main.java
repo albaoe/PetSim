@@ -72,14 +72,14 @@ public class Main {
         System.out.println("Introduce el nombre de tu mascota:");
         String nombre = teclado.next();
 
-        System.out.println("Introduce el peso de tu mascota:");
+        System.out.println("Introduce el peso de tu mascota (0-100 kg):");
         //////////////////////FALTA////////////////////////
         float peso = teclado.nextFloat();
 
-        System.out.println("Introduce la edad de tu mascota:");
+        System.out.println("Introduce la edad de tu mascota (0-150 años):");
         //////////////////////FALTA////////////////////////
         int edad = teclado.nextInt();
-
+        //////////////////////FALTA////////////////////////
         return new Topo(nombre,edad,peso);
     }
 
@@ -109,10 +109,13 @@ public class Main {
             case 3:
                 comida = Mascota.Comida.hamburguesa;
                 break;
-            default:
+
+            //////////////////////FALTA////////////////////////
+            /*default:
                 System.out.println("No te inventes opciones. Te vas a comer una pizza, por topo.\n ");
                 comida = Mascota.Comida.pizza;
                 break;
+            */
         }
         }catch(NumberFormatException e){
             System.out.println("Se requiere un número. Te vas a comer una pizza, por topo.\n ");
@@ -161,12 +164,12 @@ public class Main {
                         System.out.println(mascota.programar("class Tutu() {}\n"));
                         break;
                     default:
-                        System.out.println("No he hecho nada, torpe :(\n");
+                        System.out.println("No he hecho nada, torpe >:/\n");
                         break;
 
                 }
             }catch(Exception e){
-                System.out.println("Introduce un numero.\n");
+                System.out.println("Upss, ha pasado algo raro.\n");
             }
         }
     }
