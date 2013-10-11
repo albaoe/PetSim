@@ -78,11 +78,24 @@ public class Main {
         System.out.println("Introduce el nombre de tu mascota:");
         String nombre = teclado.next();
 
-        System.out.println("Introduce el peso de tu mascota:");
-        float peso = teclado.nextFloat();
+        float peso;
+        int edad;
 
-        System.out.println("Introduce la edad de tu mascota:");
-        int edad = teclado.nextInt();
+        do{
+            System.out.println("Introduce el peso de tu mascota:");
+            peso = teclado.nextFloat();
+            if(peso < 0 || peso > 100)
+                System.out.println("Su mascota debe pesar entre 0 y 100 Kg.\n");
+
+        }while(peso < 0 || peso > 100);
+
+        do{
+            System.out.println("Introduce la edad de tu mascota:");
+            edad = teclado.nextInt();
+            if(edad < 0 || edad > 150)
+                System.out.println("Su mascota debe tener entre 0 y 150 años.\n");
+
+        }while(edad < 0 || edad > 150);
 
         return new Topo(nombre,edad,peso);
     }
