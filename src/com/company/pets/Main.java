@@ -18,7 +18,7 @@ public class Main {
             System.out.println("1) Crear mascota\n");
             System.out.println("0) Salir\n");
 
-            //////////////////////FALTA////////////////////////
+            //////////////////////FALTA   1////////////////////////
 
             try{
                 read = teclado.nextInt();
@@ -56,6 +56,7 @@ public class Main {
                     System.out.println(topillo.saludo());
                     UsarMascota(topillo);
                     break;
+                //////////////////////FALTA   2////////////////////////
 
             }
         }catch(Exception e){
@@ -73,13 +74,13 @@ public class Main {
         String nombre = teclado.next();
 
         System.out.println("Introduce el peso de tu mascota (0-100 kg):");
-        //////////////////////FALTA////////////////////////
+        //////////////////////FALTA   3////////////////////////
         float peso = teclado.nextFloat();
 
         System.out.println("Introduce la edad de tu mascota (0-150 años):");
-        //////////////////////FALTA////////////////////////
+        //////////////////////FALTA   4////////////////////////
         int edad = teclado.nextInt();
-        //////////////////////FALTA////////////////////////
+        //////////////////////FALTA   5////////////////////////
         return new Topo(nombre,edad,peso);
     }
 
@@ -110,7 +111,7 @@ public class Main {
                 comida = Mascota.Comida.hamburguesa;
                 break;
 
-            //////////////////////FALTA////////////////////////
+            //////////////////////FALTA   6////////////////////////
             /*default:
                 System.out.println("No te inventes opciones. Te vas a comer una pizza, por topo.\n ");
                 comida = Mascota.Comida.pizza;
@@ -163,15 +164,8 @@ public class Main {
                     case 4:
                         System.out.println(mascota.programar("class Tutu() {}\n"));
                         break;
-                    //////////////////////FALTA////////////////////////
-                    /*
-                    case 0:
-                        System.out.println("Saliendo...");
-                        break;
-                    */
-                    default:
-                        System.out.println("No he hecho nada, torpe >:/\n");
-                        break;
+                    //////////////////////FALTA 7////////////////////////
+
 
                 }
             }catch(Exception e){
