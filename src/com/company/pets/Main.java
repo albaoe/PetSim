@@ -163,6 +163,12 @@ public class Main {
                     case 4:
                         System.out.println(mascota.programar("class Tutu() {}\n"));
                         break;
+                    //////////////////////FALTA////////////////////////
+                    /*
+                    case 0:
+                        System.out.println("Saliendo...");
+                        break;
+                    */
                     default:
                         System.out.println("No he hecho nada, torpe >:/\n");
                         break;
