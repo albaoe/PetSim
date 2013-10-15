@@ -62,7 +62,13 @@ public class Main {
                     System.out.println(topillo.saludo());
                     UsarMascota(topillo);
                     break;
-
+                case 0:
+                    System.out.println("Volviendo al menu principal...\n");
+                    break;
+                default:
+                    System.out.println("Escoge una de las opciones disponibles.\n");
+                    MenuCreacion();
+                    break;
             }
         }catch(Exception e){
             System.out.println("Introduce un numero.\n");
@@ -82,7 +88,7 @@ public class Main {
         int edad;
 
         do{
-            System.out.println("Introduce el peso de tu mascota:");
+            System.out.println("Introduce el peso de tu mascota (0-100 kg):");
             peso = teclado.nextFloat();
             if(peso < 0 || peso > 100)
                 System.out.println("Su mascota debe pesar entre 0 y 100 Kg.\n");
@@ -90,7 +96,7 @@ public class Main {
         }while(peso < 0 || peso > 100);
 
         do{
-            System.out.println("Introduce la edad de tu mascota:");
+            System.out.println("Introduce la edad de tu mascota (0-150 años):");
             edad = teclado.nextInt();
             if(edad < 0 || edad > 150)
                 System.out.println("Su mascota debe tener entre 0 y 150 años.\n");
@@ -178,7 +184,7 @@ public class Main {
                         System.out.println(mascota.programar("class Tutu() {}\n"));
                         break;
                     case 0:
-                        System.out.println("Saliendo...");
+                        System.out.println("Volviendo al menu principal...\n");
                         break;
                     default:
                         System.out.println("No he hecho nada, torpe >:/\n");
